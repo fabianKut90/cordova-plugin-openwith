@@ -1,4 +1,4 @@
-// Copyright (c) 2017 DavidStrausz
+e// Copyright (c) 2017 DavidStrausz
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +22,7 @@ const PLUGIN_ID = "cordova-plugin-openwith";
 
 module.exports = function (context) {
     var child_process = require('child_process');
-    var deferral = context.requireCordovaModule('q').defer();
+    var deferral = require('q').defer();
 
     console.log('Installing "' + PLUGIN_ID + '" dependencies');
     child_process.exec('npm install --production', {cwd:__dirname}, function (error) {
