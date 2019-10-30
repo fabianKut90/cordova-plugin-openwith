@@ -22,7 +22,8 @@ const PLUGIN_ID = "cordova-plugin-openwith";
 
 module.exports = function (context) {
     var child_process = require('child_process');
-    var deferral = require('q').defer();
+        var deferral = context.requireCordovaModule('q').defer();
+
 
     console.log('Installing "' + PLUGIN_ID + '" dependencies');
     child_process.exec('npm install --production', {cwd:__dirname}, function (error) {
